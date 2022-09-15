@@ -1,10 +1,7 @@
-import numpy as np
 import pickle
-
 import pandas as pd
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.compose import ColumnTransformer
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, request
+import os
 
 # loading Pickle Models
 
