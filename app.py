@@ -7,8 +7,18 @@ from sklearn.compose import ColumnTransformer
 from flask import Flask, render_template, url_for, request
 
 # loading Pickle Models
-model = pickle.load(open("model/model.pkl", "rb"))
-Transformer = pickle.load(open("model/Transformer.pkl", "rb"))
+
+dir_name = os.getcwd()
+folder_name = "model"
+pickle_model_name = "model.pkl"
+pickle_trans_name = "Transformer.pkl"
+
+model_path = os.path.join(dir_name, folder_name, pickle_model_name)
+trans_path = os.path.join(dir_name, folder_name, pickle_trans_name)
+
+# Pickle
+model = pickle.load(open(model_path, "rb"))
+Transformer = pickle.load(open(trans_path, "rb"))
 
 app = Flask(__name__)
 
