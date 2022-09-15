@@ -1,0 +1,34 @@
+{<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Result</title>
+    <style>
+        .myBody {
+                    background-color : azure
+                  }
+
+        .myDiv {
+                  border: 5px outset red;
+                  background-color: lightblue;
+                  text-align: center;
+                }
+        .myH1Tag {
+                    height: 50px;
+                    text-align : center;
+                    color:red;
+                  }
+
+    </style>
+</head>
+<body class="myBody">
+    <h1 class="myH1Tag">Prediction Result</h1>
+    <br><br>
+    <div class="myDiv">
+            {% if result==1 %}
+            <h3>Passenger Survived!!!</h3>
+            {% else %}
+            <h3>Passenger Did not Survived !!!</h3>
+            {% endif %}
+    </div>
+    <a href="{{ url_for('homePage') }}">Home Page</a>
+</body>

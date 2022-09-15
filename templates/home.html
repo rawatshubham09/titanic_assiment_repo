@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Titanic Survival Predictor</title>
+
+    <style>
+        .myBody {
+                    background-color : azure
+                  }
+
+        .myDiv {
+                  border: 5px outset red;
+                  background-color: lightblue;
+                  text-align: center;
+                }
+        .myHtag {
+
+                text-align : center;
+                color : green
+                }
+        .myH1Tag {
+                    height: 50px;
+                    text-align : center;
+                    color:red;
+                  }
+    </style>
+</head>
+<body class="myBody">
+    <br/>
+    <h1 class="myH1Tag">Titanic Survival Prediction</h1>
+    <br/><br/>
+    <h3 class="myHtag">Enter Following Information to Predict value:</h3>
+    <div class="myDiv">
+    <form method="POST" action="{{ url_for( 'predict' ) }}">
+        <div>
+            <label for="PClass">Passenger Class </label><br>
+            <input type="int" id="PClass" name="PClass" placeholder="PClass"><br><br>
+
+            <label for="SibSp">Siblings aboard </label><br>
+            <input type="int" id="SibSp" name="SibSp"  placeholder=" SibSp "><br><br>
+
+            <label for="Parch"> Parents/Children Aboard </label><br>
+            <input type="int" id="Parch" name="Parch" placeholder=" Parch "><br><br>
+
+            <label for="Sex">Gender </label><br>
+            <input type="str" id="Sex" name="Sex" placeholder="Gender"><br><br>
+
+            <label for="AGE">AGE </label><br>
+            <input type="str" id="AGE" name="AGE" placeholder="Age in Years"><br><br>
+
+            <label for="Fare">Fare </label><br>
+            <input type="str" id="Fare" name="Fare" placeholder="Journey Fare"><br><br>
+
+            <input type="submit" value="Submit">
+
+        </div>
+    </form>
+    </div>
+</body>
+</html>
